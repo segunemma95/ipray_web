@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – iPray Global</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Register for iPray Global Conference</h1>
+    <a href="/">⬅ Back to Home</a>
+  </header>
+
+  <section class="form-container">
+    <form id="prayerForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="country" placeholder="Country" required />
+      <button type="submit">Register</button>
+    </form>
+
+    <p id="statusMsg"></p>
+  </section>
+
+  <script>
+    const form = document.getElementById("prayerForm");
+    const statusMsg = document.getElementById("statusMsg");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      statusMsg.innerText = "Submitting...";
+
+      const data = new FormData(form);
+      const response = await fetch(
+        "YOUR_GOOGLE_SCRIPT_WEB_URL",
+        { method: "POST", body: data }
+      );
+
+      if (response.ok) {
+        statusMsg.innerText = "✅ Registration Successful! Thank you.";
+        form.reset();
+      } else {
+        statusMsg.innerText = "❌ Something went wrong. Try again.";
+      }
+    });
+  </script>
+</body>
+</html>

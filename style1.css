@@ -1,0 +1,123 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: #f9fafb;
+  color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #0066ff;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 420px;
+  width: 90%;
+  background: #fff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.06);
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+form input:focus {
+  border-color: #0066ff;
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  background: #0066ff;
+  border: none;
+  padding: 15px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+form button:hover {
+  background: #004fcc;
+}
+
+#statusMsg {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Landing Page Hero (Optional) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 520px;
+  margin-bottom: 20px;
+}
+
+.hero a.btn {
+  background: #0066ff;
+  padding: 14px 24px;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.hero a.btn:hover {
+  background: #004fcc;
+}
